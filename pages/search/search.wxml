@@ -1,0 +1,35 @@
+<view class="all"style="background:url('../../images/backshoucang.jpg');background-repeat:no-repeat; background-size:100% 100%;-moz-background-size:100% 100%;">
+<view class="search" >
+<input class="text"bindinput="input"></input>
+<image class="button"style="width:100rpx;height:100rpx"bindtap="search"src="../../images/search.png" ></image>
+<!--button class="button" >search</button-->
+</view>
+<view hidden="{{s}}"class="s"style="background:url('../../images/backshoucang.jpg');background-repeat:no-repeat; background-size:100% 100%;-moz-background-size:100% 100%;">
+
+<view class="box"style="background:url('../../images/wordback.jpg');background-repeat:no-repeat; background-size:100% 100%;-moz-background-size:100% 100%;">
+<view class="yiqi">
+<view style="font-size:39px">{{input}}</view>
+<view class="starimage" >
+<image style="width:30px; height: 30px" src="../../images/hua.png" bindtap="shoucang" ></image>
+</view>
+
+</view>
+<view style="">/{{wordyinbiao}}/</view>
+<view wx:for="{{wordshiyi}}" wx:for-item="item"wx:key="{{index}}" bindtap="xiangxi">
+<view>{{item}}</view>
+</view>
+</view>
+<view style="font-weight:700;margin-left:1%">相近词语</view>
+<view class="divLine"></view>
+
+<view  wx:for="{{relword}}" wx:for-item="item"wx:key="{{index}}" class="box"style="background:url('../../images/wordback.jpg');background-repeat:no-repeat; background-size:100% 100%;-moz-background-size:100% 100%;"bindtap="xiangxi">
+<view class="yiqi">
+<view style="font-size:21px">{{item.relword}}</view>
+<view class="starimage" >
+<image style="width:30px; height: 30px" src="../../images/hua.png" bindtap="shoucang" ></image>
+</view>
+</view>
+<view style="font-size:15px">{{item.pos}}{{item.reltran}}</view>
+</view>
+</view>
+</view>

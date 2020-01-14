@@ -1,0 +1,27 @@
+<!--miniprogram/pages/listenbook/listenbook.wxml-->
+
+<view class="wordback"style="background:url('../../images/itemback5.png');">
+<view hidden="{{xiangxi}}">
+<view class="container">
+  <view class='box' wx:for="{{image}}"wx:for-item="item"wx:for-index="index"><image id="{{index}}" src="{{item}}"style="width: 211rpx; height: 211rpx;"bindtap="click"bindlongpress="deleteImage"></image></view>
+</view>
+<view  class="button-view"><image bindtap="addciben"src="../../images/add.jpg" style="width: 30px; height: 30px;"></image></view>
+
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{newadd}}"></view>
+<view class="modal-dialog1" wx:if="{{newadd}}">
+  <view class="modal-title"><view class="t">听力集名称</view><input class="weui-input" auto-focus placeholder=""bindinput="inputwordname"/>
+</view>
+   <view class="modal-title">听力集封面<image style="width: 30px; height: 30px;"src="../../images/add.jpg" bindtap="addimage"></image></view>
+    <view class="modal-title"><view class="t">听力集类别</view><input class="weui-input" auto-focus placeholder=""bindinput="inputwordleibie"/></view>
+    <view class="f">
+ <button bindtap="tianjia">确定</button>
+ <button bindtap="quxiao">取消</button>
+ </view>
+</view>
+</view>
+<view hidden="{{!xiangxi}}"> 
+<view>当前听力集：{{currentwordbookname}}</view>
+<!--button type="primary" bindtap="add_word">添加词语</button-->
+<button type="primary" bindtap="start_study">开始学习</button>
+</view>
+</view>

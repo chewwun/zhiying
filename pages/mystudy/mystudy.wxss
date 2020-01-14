@@ -1,0 +1,4 @@
+/* miniprogram/pages/mystudy/mystudy.wxss */
+.canvans{
+  margin-top:5%
+}

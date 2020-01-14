@@ -1,0 +1,42 @@
+<view class="whole"style="background:url('../../images/backshoucang.jpg');background-repeat:no-repeat; background-size:100% 100%;-moz-background-size:100% 100%;">
+<view  class="firstpart">
+
+<image class="starimage"style="width:30px; height: 30px" src="../../images/hua.png" bindtap="shoucang" ></image>
+
+</view>
+<view class="part">
+<image style="width: 30px; height: 30px;"src="../../images/sound.png" bindtap="wordsound" ></image>
+<image style="width:30px; height: 30px;margin-left:3%" src="../../images/da.png" bindtap="answer1" ></image>
+<image style="width:30px; height: 30px;margin-left:3%" src="../../images/xiazai.png" bindtap="download_listen" ></image>
+</view>
+<!--view hidden="{{listen}}">
+<view class="prompt">你输入的是：{{newWords}}</view>
+<textarea type="text" maxlength="-1" auto-height="true" bindinput="updateInput" placeholder="请在此处粘贴英文材料"></textarea>
+<view class="button-view">
+<button type="primary" bindtap="confirm">上传材料</button>
+</view>
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{add}}"></view>
+<view class="modal-dialog" wx:if="{{add}}">
+  <view class="modal-title">{{modalcontent}}</view>
+   <view class="modal-title">{{existcontent}}</view>
+    <view class="modal-title">{{failedcontent}}</view>
+  <view class="modal-content">{{modalzi}}</view>
+ <button bindtap="confirmback">确定</button>
+</view>
+</view-->
+<view class="listenview" >
+
+<scroll-view>
+<!--view wx:for="{{questionset}}" wx:for-item="items" wx:for-index="rowIndex" class="row"><view wx:for="{{items}}" id="{{rowIndex}}-{{index}}" bindtap="selectCharacter">{{item}}　</view>　</view-->
+<view class="row">{{questiontxt}}</view>
+
+<!--view class="listenarea" wx:for="{{questionset}}"wx:for-item="items"><view>{{items}}</view></view-->
+<!--button type="primary" bindtap="answer1">答案</button-->
+<image class="back"style="width:70px; height: 70px" src="../../images/backc.png" bindtap="back"></image>
+<image class="danciben" style="width:60px; height: 60px" src="../../images/danciben.png" bindtap="tingliji"></image>
+<!--button type="primary" bindtap="back">返回</button-->
+<!--button type="primary" bindtap="tingliji">听力集</button-->
+<!--text hidden="{{answer}}"class="answer">{{answertxt}}</text-->
+</scroll-view>
+</view>
+</view>

@@ -1,0 +1,16 @@
+<view class="allpart"style="background:url('../../images/backshoucang.jpg');">
+ <view class="tab-part">
+  <view class="tab {{selectedTab == 'word' ? 'tab-clicked' : ''}}" id="tab-dati" bindtap="clickTab1">单词</view>
+  <view class="tab {{selectedTab == 'listen' ? 'tab-clicked' : ''}}" id="tab-parent" bindtap="clickTab2">听力</view>
+</view>
+<view hidden="{{shoucangword}}">
+ 
+ <view class="divLine"></view>
+ <view wx:for="{{likeword}}"wx:for-item="item"wx:for-index="index"><view class="box"style="background:url('../../images/itemback4.jpg');background-repeat:no-repeat; background-size:100% 100%;-moz-background-size:100% 100%;"bindtap="know">{{item}}</view><view class="divLine"></view></view>
+ </view>
+ <view hidden="{{!shoucangword}}">
+
+<view class="divLine"></view>
+<view wx:for="{{likelisten}}"wx:for-item="item"><view class="likelisten"style="background:url('../../images/itemback4.jpg');background-repeat:no-repeat; background-size:100% 100%;-moz-background-size:100% 100%;">{{item}}</view><view class="divLine"></view></view>
+</view>
+</view>

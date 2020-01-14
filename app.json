@@ -1,0 +1,65 @@
+{
+  "pages": [
+    
+    "pages/index1/index1",
+    "pages/study_index/study_index",
+    "pages/yinbiao_study/yinbiao_study",
+    "pages/userConsole/userConsole",
+    "pages/storageConsole/storageConsole",
+    "pages/databaseGuide/databaseGuide",
+   
+  
+    "pages/openapi/openapi",
+    "pages/openapi/serverapi/serverapi",
+    "pages/openapi/callback/callback",
+    "pages/openapi/cloudid/cloudid",
+    
+   
+    "pages/test_phonetic/test_phonetic",
+    "pages/testresult/testresult",
+    "pages/listen_test/listen_test",
+    "pages/word_study/word_study",
+    "pages/chooseword/chooseword",
+    "pages/study/study",
+    "pages/upload_page/upload_page",
+    "pages/like_page/like_page",
+    "pages/continue_uploadpage/continue_uploadpage",
+    "pages/wordbook/wordbook",
+    "pages/listenbook/listenbook",
+    "pages/search/search",
+    "pages/shezhi/shezhi",
+    "pages/mystudy/mystudy"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "云开发 QuickStart",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#09bb07",
+    "list": [
+      {
+        "pagePath": "pages/study_index/study_index",
+        "text": "学习"
+      },
+      {
+        "pagePath": "pages/upload_page/upload_page",
+        "text": "上传"
+      },
+      {
+        "pagePath": "pages/like_page/like_page",
+        "text": "收藏"
+      }
+    ]
+  },
+  "plugins": {
+    "WechatSI": {
+      "version": "0.0.7",
+      "provider": "wx069ba97219f66d99"
+    }
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

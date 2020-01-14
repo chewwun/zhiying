@@ -1,0 +1,64 @@
+<!--view class="tab-part">
+  <view class="tab {{selectedTab == 'word' ? 'tab-clicked' : ''}}" id="tab-dati" bindtap="clickTab1">单词</view>
+  <view class="tab {{selectedTab == 'listen' ? 'tab-clicked' : ''}}" id="tab-parent" bindtap="clickTab2">听力</view>
+</view-->
+
+
+
+
+<view hidden="{{word}}">
+<view hidden="{{!wordset}}">
+<view class="prompt"><view>你输入的是：</view><view>{{newWords}}</view></view>
+<textarea type="text" maxlength="-1" auto-height="true" bindinput="updateInput" placeholder="请在此处粘贴自定义英文材料"></textarea>
+<view class="button-view">
+<button type="primary" bindtap="upload_file">上传材料</button>
+<button type="primary" bindtap="confirmadd">上传文本</button>
+</view>
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{add}}"></view>
+<view class="modal-dialog" wx:if="{{add}}">
+
+<view class="modal-title" >是否继续添加</view>
+
+ <button bindtap="tianjia">确定</button>
+</view>
+
+<!--view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{newadd}}"></view>
+<view class="modal-dialog1" wx:if="{{newadd}}">
+  <view class="modal-title"><view class="t">词本名称</view><input class="weui-input" auto-focus placeholder=""bindinput="inputwordname"/>
+</view>
+   <view class="modal-title">词本封面<image style="width: 30px; height: 30px;"src="../../images/add.jpg" bindtap="addimage"></image></view>
+    <view class="modal-title"><view class="t">词本类别</view><input class="weui-input" auto-focus placeholder=""bindinput="inputwordleibie"/></view>
+
+ <button bindtap="tianjia">确定</button>
+</view-->
+
+</view>
+<!--view hidden="{{wordset}}">
+<button type="primary" bindtap="addnew">新建词本</button>
+</view-->
+</view>
+  
+
+<view hidden="{{!word}}">
+<view hidden="{{!wordset}}">
+<view class="prompt">你输入的是：{{newWords}}</view>
+<textarea type="text" maxlength="-1" auto-height="true" bindinput="updateInput" placeholder="请在此处粘贴自定义英文材料"></textarea>
+<view class="button-view">
+<button type="primary" bindtap="upload_lfile">上传材料</button>
+<button type="primary" bindtap="confirmadd">上传文本</button>
+</view>
+
+
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{add}}"></view>
+<view class="modal-dialog" wx:if="{{add}}">
+  <view class="modal-title">{{modalcontent}}</view>
+   <view class="modal-title">{{existcontent}}</view>
+    <view class="modal-title">{{failedcontent}}</view>
+  <view class="modal-content">{{modalzi}}</view>
+ <button bindtap="confirmback">确定</button>
+</view>
+
+</view>
+
+
+</view>
